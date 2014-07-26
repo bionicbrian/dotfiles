@@ -1,0 +1,62 @@
+snippet log
+console.log($1);
+endsnippet
+
+snippet dir
+console.dir($1);
+endsnippet
+
+snippet fun
+function $1($2) {
+	$3
+}
+endsnippet
+
+snippet mod
+"use strict";
+
+module.exports = function $1($2) {
+	$3
+};
+endsnippet
+
+snippet debug
+/* jshint debug: true */
+debugger;
+endsnippet
+
+snippet glob
+/* global {$1: window} */
+endsnippet
+
+snippet time "setTimeout function"
+setTimeout(function () {
+	${VISUAL}$0
+}, ${1:200});
+endsnippet
+
+snippet if
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet ife
+if ($1) {
+	$2
+} else {
+	$3
+}
+endsnippet
+
+snippet ifif
+if ($1) {
+	$2
+} else if ($3) {
+	$4
+}
+endsnippet
+
+snippet /
+/*${VISUAL}$0*/
+endsnippet
