@@ -12,16 +12,30 @@ function $1($2) {
 }
 endsnippet
 
-snippet mod
-"use strict";
-
-module.exports = function $1($2) {
+snippet f
+var ${1:foo} = (${2}) => {
 	$3
 };
 endsnippet
 
+snippet class
+class ${1:Foo} {
+	constructor() {
+	}
+}
+endsnippet
+
+snippet classreact
+class ${1:Foo} extends React.Component {
+	render() {
+		return (
+			${2:<div className="foo"></div>}
+		);
+	}
+}
+endsnippet
+
 snippet debug
-/* jshint debug: true */
 debugger;
 endsnippet
 
@@ -30,7 +44,7 @@ snippet glob
 endsnippet
 
 snippet time "setTimeout function"
-setTimeout(function () {
+setTimeout(() => {
 	${VISUAL}$0
 }, ${1:200});
 endsnippet
