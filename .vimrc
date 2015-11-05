@@ -50,6 +50,7 @@ noremap ]b :bn<CR>
 noremap <C-J> 5j<CR>
 noremap <C-K> 5k<CR>
 imap jj <Esc>
+map <Leader>c :!grunt recompile:css<CR>
 
 " let g:scheme_builtin_swank = 1
 " let g:slimv_swank_scheme = '!osascript -e "tell application \"Terminal\" to do script \"!scheme --load /Users/bmo/projects/personal/scheme/mit-scheme-swank/swank.scm &\""'
