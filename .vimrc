@@ -53,17 +53,19 @@ noremap <C-K> 5k<CR>
 imap jj <Esc>
 imap ii <ESC>:w<CR>a
 nmap <Leader>b :b
-nmap <Leader>c :!grunt recompile:css<CR>
 nmap <Leader>d :bd *<C-A>
 nmap <Leader>f :NERDTreeFind<CR>
 nmap <Leader>h :set hlsearch! hlsearch?<CR>
-nmap <Leader>j :!grunt recompile:js<CR>
+nmap <Leader>k :bp<CR>
+nmap <Leader>l :bn<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
-nmap <Leader>s :Ag! <C-R><C-W>
+nmap <Leader>s :Ag!
 nmap <Leader>x :if exists("g:syntax_on") <Bar> syntax off <Bar> else <Bar> syntax enable <Bar> endif<CR>
 
-highlight DebugCode ctermfg=red guifg=red
-match DebugCode /console\|debugger;/
+"http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+"map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+"\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+"\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " let g:scheme_builtin_swank = 1
 " let g:slimv_swank_scheme = '!osascript -e "tell application \"Terminal\" to do script \"!scheme --load /Users/bmo/projects/personal/scheme/mit-scheme-swank/swank.scm &\""'
