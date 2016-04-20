@@ -40,7 +40,7 @@ let NERDTreeQuitOnOpen=1
 
 let mapleader="\<SPACE>"
 
-map <F8> :ls<CR>:b
+nnoremap <F8> :ls<CR>:b
 nmap <F9> :Git! diff %<CR>
 nmap <F10> :Git! diff ./<CR>
 nnoremap <C-Up> :move -2<CR>
@@ -50,8 +50,7 @@ noremap [b :bp<CR>
 noremap ]b :bn<CR>
 noremap <C-J> 5j<CR>
 noremap <C-K> 5k<CR>
-imap jj <Esc>
-imap ii <ESC>:w<CR>a
+imap jj <ESC>
 nmap <Leader>b :b
 nmap <Leader>d :bd *<C-A>
 nmap <Leader>f :NERDTreeFind<CR>
